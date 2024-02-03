@@ -13,7 +13,7 @@ public class Pet {
         this.name = name;
         this.isFlying = isFlying;
         this.isAvailabe = isAvailabe;
-        System.out.println("created %s with 0 Bonuses");
+        System.out.printf("created %s with 0 Bonuses\n", name);
     }
 
     public String getName() {
@@ -26,6 +26,10 @@ public class Pet {
 
     public List<BonusStat> getBonusStatList() {
         return bonusStatList;
+    }
+
+    public void printBonusStatList() {
+        bonusStatList.forEach(System.out::println);
     }
 
     public void setBonusStatList(List<BonusStat> bonusStatList) {

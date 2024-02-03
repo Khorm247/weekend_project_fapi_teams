@@ -5,8 +5,8 @@ public class BonusStat {
     private float statWeight = 1; // ToDo: fine tuning, for now all stats are equally weighted
     private float amount = 0; // ToDo: add starting value, for now this is ignored
 
-    public BonusStat(String statName, float statWeight, float amount) {
-        this.statName = statName;
+    public BonusStat(BonusStats bonusStats, float statWeight, float amount) {
+        this.statName = bonusStats.toString();
         this.statWeight = statWeight;
         this.amount = amount;
     }
@@ -33,5 +33,12 @@ public class BonusStat {
 
     public void setAmount(float amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return statName +
+                ", statWeight = " + statWeight +
+                ", amount = " + amount;
     }
 }
