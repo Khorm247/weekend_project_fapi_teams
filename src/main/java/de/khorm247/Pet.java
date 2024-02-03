@@ -9,11 +9,11 @@ public class Pet {
     private boolean isFlying;
     private boolean isAvailabe;     // did you find this pet, already?
 
-    public Pet(String name, List<BonusStat> bonusStatList, boolean isFlying, boolean isAvailabe) {
+    public Pet(String name, boolean isFlying, boolean isAvailabe) {
         this.name = name;
-        this.bonusStatList = bonusStatList;
         this.isFlying = isFlying;
         this.isAvailabe = isAvailabe;
+        System.out.println("created %s with 0 Bonuses");
     }
 
     public String getName() {
@@ -30,6 +30,18 @@ public class Pet {
 
     public void setBonusStatList(List<BonusStat> bonusStatList) {
         this.bonusStatList = bonusStatList;
+    }
+
+    public void addBonus(BonusStat bonusStat){
+        bonusStatList.add(bonusStat);
+    }
+    public void removeBonusByName(String bonusStatName){
+        for(BonusStat bonus : bonusStatList) {
+            if(bonus.getStatName().equals(bonusStatName)){
+                bonusStatList.remove(bonus);
+                return;
+            }
+        }
     }
 
     public boolean isFlying() {
