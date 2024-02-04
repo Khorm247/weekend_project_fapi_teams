@@ -11,7 +11,7 @@ public enum BonusStats {
     STATS_FERMENTING_EXP_EARNED("Fermenting Exp Earned"),
     STATS_BREWING_EXP_EARNED("Brewing Exp Earned"),
     STATS_ITEM_RATING_BONUS("Item Rating Bonus"),
-    STATS_RESIDUE_BONUS("Residue Bonus"),
+    STATS_RESIDUE_BONUS("Residue Created"),
     STATS_POOP_CREATED("Poop Created"),
     STATS_MILK_CREATED("Milk Created"),
     STATS_CARD_EXP("Card Exp"),

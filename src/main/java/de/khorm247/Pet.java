@@ -13,7 +13,7 @@ public class Pet {
         this.name = name;
         this.isFlying = isFlying;
         this.isAvailabe = isAvailabe;
-        System.out.printf("created %s with 0 Bonuses\n", name);
+        //System.out.printf("created %s with 0 Bonuses\n", name);
     }
 
     public String getName() {
@@ -62,5 +62,13 @@ public class Pet {
 
     public void setAvailabe(boolean availabe) {
         isAvailabe = availabe;
+    }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "name='" + name + '\'' +
+                '}' +
+                bonusStatList.toString();
     }
 }
