@@ -27,13 +27,11 @@ Summary:
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         Pet pet = new Pet("Fluffy", false, true);
         pet.addBonus(new BonusStat(BonusStats.STATS_GRASSHOPPER_DAMAGE, 1, 0));
         pet.addBonus(new BonusStat(BonusStats.STATS_ITEM_RATING_BONUS, 1, 0));
         pet.addBonus(new BonusStat(BonusStats.STATS_RESIDUE_BONUS, 1, 0));
         pet.addBonus(new BonusStat(BonusStats.STATS_CARD_EXP, 1, 0));
-
         pet.printBonusStatList();
+        }
     }
-}
