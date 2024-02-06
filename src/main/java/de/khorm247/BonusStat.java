@@ -1,21 +1,21 @@
 package de.khorm247;
 
 public class BonusStat {
-    private String statName;
+    private BonusStats statName;
     private float statWeight = 1; // ToDo: fine tuning, for now all stats are equally weighted
     private float amount = 0; // ToDo: add starting value, for now this is ignored
 
-    public BonusStat(String statName, float statWeight, float amount) {
+    public BonusStat(BonusStats statName, float statWeight, float amount) {
         this.statName = statName;
         this.statWeight = statWeight;
         this.amount = amount;
     }
 
     public String getStatName() {
-        return statName;
+        return statName.getBonusStatName();
     }
 
-    public void setStatName(String statName) {
+    public void setStatName(BonusStats statName) {
         this.statName = statName;
     }
 
@@ -37,6 +37,6 @@ public class BonusStat {
 
     @Override
     public String toString() {
-        return statName;
+        return statName.toString();
     }
 }
